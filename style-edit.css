@@ -4,7 +4,6 @@
 
 body{
 	font-family: 'Inter', sans-serif;
-	overflow: hidden; /* Prevent scrolling on the entire page */
     margin: 0;
 }
 

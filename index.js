@@ -1,3 +1,5 @@
+let i = 3;
+
 function toggleColors(selectedPage) {
     const captchaItem = document.querySelector('.nav-item.left');
     const contactItem = document.querySelector('.nav-item.right');
@@ -89,6 +91,7 @@ function toggleColors(selectedPage) {
         `;
     } else if (selectedPage === 'contact') {
         contactItem.classList.add('selected');
+		i = 3
         contentDiv.innerHTML = `
 			<ul class="contacts-list">
 
@@ -133,7 +136,7 @@ function toggleColors(selectedPage) {
     }
 }
 
-let i = 3; // Initialize i outside the function
+ // Initialize i outside the function
 
 function addPin(val) {
     const contentDiv = document.getElementsByClassName('contacts-library')[0];
@@ -260,6 +263,7 @@ function resetPulse() {
     pulse.style.transform = `translateX(${position}px)`; // Apply reset position
     pulse.style.backgroundColor = 'rgba(212, 179, 255)'; // Reset to default color
 }
+
 
 
 
