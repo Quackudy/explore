@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 4vh;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+
+.content-center {
+    position: absolute; /* Use absolute positioning */
+    bottom: 1rem; /* Set to how far above the bottom you want it */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically within the flex container */
+}
+
+
+.caller-image {
+    position: absolute;
+    width: 1.2rem;  /* Adjust size of the image */
+    border-radius: 50%;
+    object-fit: scale-down; /* Keep image aspect ratio */
+    z-index: 0; /* Make sure the image is behind the icons */
+}
+
+.pulse {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(212, 179, 255); /* Default background color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for movement and color */
+}
+
+.pulse i {
+    color: #fff;
+}
+
+.pulse::before, .pulse::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(190, 156, 212);
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 50%;
+    animation: pulse 1s linear infinite;
+}
+
+.pulse::after {
+    animation-delay: 0.3s; /* Delay for second pulse */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: 'KhanoonThin'; /* Define the font family name */
+    src: url('KhanoonThin.ttf') format('truetype'); /* Path to the font file */
+}
+
+
+.caller-name {
+    color: white; /* Text color */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Allow flexbox to use full height of its container */
+    position: absolute; /* Allow positioning relative to the container */
+    top: 40%; /* Adjust this value to move slightly above center */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center text by shifting it half its width and height */
+    font-family: 'KhanoonThin'; /* Apply the custom font */ /* Adjust the font size as needed */
+}
+
+.pin-check {
+    color: rgba(255, 0, 0, 0.8); /* Slightly red color with some transparency */
+    text-align: center; /* Center text */
+    position: absolute; /* Allow positioning relative to the container */
+    top: 50%; /* Position below the caller name */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center text */
+    font-family: 'KhanoonThin'; /* Apply the same font */
+    font-size: 18px; /* Font size for the warning */
+}
+
+.circle-image {
+    width: 6rem; /* Set the width of the image */
+    height: 6rem; /* Set the height to match the width for a circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute; /* Position it absolutely */
+    top: 10vh; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 10; /* Ensure it appears above other content */
+    display: none; /* Initially hidden */
+}

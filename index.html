@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+
+	<title>Contact Form</title>
+</head>
+<body>
+
+	<div class="container">
+		<!--  SEARCH FORM -->
+		<header class="header">
+			
+			<form class="search-bar">
+				<input type="search-name" class="contact-search" name="search-area" placeholder="ค้นหารายชื่อ">
+			</form>
+
+			<!--  ADD-CONTACT BUTTON/ICON -->
+			<a href="edit.html"><i class="fas fa-plus-circle add"></i></a>
+		</header>
+
+		<!--  CONTACT LIST -->
+		<section class="contacts-library">
+			<ul class="contacts-list">
+				
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item">
+							<p class="contact-name">อาจารย์เบียร์</p>
+							<p class="relationship">เพื่อน</p>
+						</li>
+
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+						</li>
+					</div>
+				</a>
+
+				<hr>
+
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item">
+							<p class="contact-name">คนตื่นธรรม</p>
+							<p class="relationship">เพื่อน</p>
+						</li>
+
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+
+						</li>
+					</div>
+				</a>
+
+				<hr>
+
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item">
+							<p class="contact-name">เจน</p>
+							<p class="relationship">ไม่ชัดเจน</p>
+						</li>
+
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+						</li>
+					</div>
+				</a>
+
+				<hr>
+
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item">
+							<p class="contact-name">นุ่น</p>
+							<p class="relationship">รุ่นน้อง</p>
+						</li>
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+						</li>
+					</div>
+				</a>
+
+				<hr>
+
+				<a href="contact-profile.html">
+					<div class="contact-section">
+						<li class="list__item">
+							<p class="contact-name">โบว์</p>
+							<p class="relationship">ป้าขายไก่ทอด</p>
+						</li>
+						<li class="list__item">
+							<i class="fas fa-phone"></i>
+						</li>
+					</div>
+				</a>
+
+				<hr>
+			</ul>
+		</section>
+	</div>
+
+    <div class="navigate">
+        <div class="nav-item left selected" onclick="toggleColors('captcha')">Contact</div>
+        <div class="nav-item right" onclick="toggleColors('contact')">Captcha</div>
+    </div>
+
+	
+
+</body>
+</html>

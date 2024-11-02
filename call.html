@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incoming Call</title>
+  <link rel="stylesheet" href="call.css">
+</head>
+<body>
+    <div class="info-call">
+    <div class="caller-name">ไม่รู้จัก</div>
+    <div class="pin-check" onclick="removeWarning()">รหัสไม่ถูกต้อง โปรดระวังมิจฉาชีพ</div>
+    </div>
+    <img src="deng.jpg" class="circle-image" id="circleImage" alt="Circular Image" style="display: none;">
+
+    <script>
+        function removeWarning() {
+            // Select the element with the class 'pin-check'
+            var pinCheck = document.querySelector('.pin-check');
+            var namecall = document.querySelector('.caller-name');
+            // Set its innerHTML to an empty string
+            pinCheck.innerHTML = '<span style="color: white; font-size: 2.5vh">มีสายเรียกเข้า...</span>';
+            namecall.innerHTML = 'ครูบาหมูเด้ง'
+            // Show the circular image
+            var circleImage = document.getElementById('circleImage');
+            circleImage.style.display = 'block'; // Make the image visible
+        }
+    </script>
+    
+    
+
+    <div class="content-center">
+        <div class="pulse" id="pulse">
+            <img src="a-phone-icon-on-transparent-background-png.webp" class="caller-image" alt="Caller Icon">
+            <i class="fas fa-phone fa-2x"></i>
+        </div>
+    </div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
