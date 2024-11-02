@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incoming Call</title>
+  <link rel="stylesheet" href="called.css">
+</head>
+<body>
+    <!-- Image for the caller -->
+    <img src="deng.jpg" class="circle-image" id="callerImage" alt="Circular Image" style="display: block;">
+
+    
+    <!-- Caller information -->
+    <div class="info-call">
+        <div class="caller-name">ครูบาหมูเด้ง</div>
+        <div class="pin-check" onclick="removeWarning()">
+            <span style="color: white; font-size: 2.2vh">00:00</span>
+        </div>
+    </div>
+    
+    <!-- Phone icon and pulse effect -->
+     <a href="index.html">
+    <div class="content-center">
+        <div class="pulse" id="pulse">
+            <img src="a-phone-icon-on-transparent-background-png.webp" class="caller-image static-phone" alt="Caller Icon" style="display: block;">
+        </div>
+    </div>
+    </a>
+    
+<script>let seconds = 0;
+    let minutes = 0;
+    
+    function startCallTimer() {
+        const pinCheckElement = document.querySelector('.pin-check');
+    
+        setInterval(() => {
+            // Increment seconds
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+            }
+    
+            // Format minutes and seconds to two digits
+            const formattedMinutes = minutes.toString().padStart(2, '0');
+            const formattedSeconds = seconds.toString().padStart(2, '0');
+    
+            // Update the pin-check element with the formatted time
+            pinCheckElement.innerText = `${formattedMinutes}:${formattedSeconds}`;
+        }, 1000); // Update every second
+    }
+    
+    // Start the timer when the page loads
+    window.onload = startCallTimer;
+    </script>
+</body>
+</html>

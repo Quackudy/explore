@@ -10,17 +10,15 @@ body {
     margin: 0;
 }
 
-
 .content-center {
     position: absolute; /* Use absolute positioning */
-    bottom: 1rem; /* Set to how far above the bottom you want it */
+    bottom: 1rem; /* Set distance from the bottom */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for perfect centering */
     display: flex;
     justify-content: center;
-    align-items: center; /* Center items vertically within the flex container */
+    align-items: center;
 }
-
 
 .caller-image {
     position: absolute;
@@ -39,47 +37,13 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for movement and color */
 }
 
-.pulse i {
-    color: #fff;
-}
-
-.pulse::before, .pulse::after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgb(190, 156, 212);
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    border-radius: 50%;
-    animation: pulse 1s linear infinite;
-}
-
-.pulse::after {
-    animation-delay: 0.3s; /* Delay for second pulse */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1.3);
-        opacity: 0;
-    }
-}
 
 @font-face {
     font-family: 'KhanoonThin'; /* Define the font family name */
     src: url('KhanoonThin.ttf') format('truetype'); /* Path to the font file */
 }
-
 
 .caller-name {
     color: white; /* Text color */
@@ -95,14 +59,14 @@ body {
 }
 
 .pin-check {
-    color: rgba(255, 0, 0, 0.8); /* Slightly red color with some transparency */
+    color: rgba(255, 255, 255, 1.00); /* Slightly red color with some transparency */
     text-align: center; /* Center text */
     position: absolute; /* Allow positioning relative to the container */
     top: 50%; /* Position below the caller name */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center text */
     font-family: 'KhanoonThin'; /* Apply the same font */
-    font-size: 18px; /* Font size for the warning */
+    font-size: 2.2vh; /* Font size for the warning */
 }
 
 .circle-image {

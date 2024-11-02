@@ -109,7 +109,7 @@ function toggleColors(selectedPage) {
 						</li>
 
 					</div>
-
+				<hr>
 
 					<div class="contact-section">
 						<li class="list__item">
@@ -121,10 +121,44 @@ function toggleColors(selectedPage) {
 	
 
 				<hr>
+
+						
+				<div class="input-group">
+					<input placeholder="ใส่รหัส" type="text" id="input-field">
+					<button class="submit-button" onclick="addPin(document.getElementById('input-field').value)"><span>เพิ่ม</span></button>
+				</div>
+
 			</ul>
         `;
     }
 }
+
+let i = 3; // Initialize i outside the function
+
+function addPin(val) {
+    const contentDiv = document.getElementsByClassName('contacts-library')[0];
+    
+    // Increment i for each new captcha added
+    i += 1;
+
+    // Create the new HTML content
+    const newContent = `
+        <div class="contact-section">
+            <li class="list__item">
+                <p class="contact-name">Captcha ${i}</p>
+                <input type="text" class="pin" value="${val}">
+            </li>
+        </div>
+        <hr>
+    `;
+    
+    // Append the new content to the existing inner HTML
+    contentDiv.innerHTML += newContent;
+}
+
+
+
+	
 
 
 const pulse = document.getElementById('pulse');
@@ -209,7 +243,7 @@ function movePulse(xDiff) {
 function checkSlide() {
     if (position < -25) { // Slide left threshold
         setTimeout(() => {
-            window.location.href = 'index.html'; // Navigate after 1 second
+            window.location.href = 'called.html'; // Navigate after 1 second
         }, 500);
     } else if (position > 25) { // Slide right threshold
         setTimeout(() => {
@@ -226,3 +260,6 @@ function resetPulse() {
     pulse.style.transform = `translateX(${position}px)`; // Apply reset position
     pulse.style.backgroundColor = 'rgba(212, 179, 255)'; // Reset to default color
 }
+
+
+
