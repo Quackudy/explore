@@ -124,3 +124,22 @@ p{
 	 outline: none;
 	cursor: pointer;
 }
+
+
+.notification {
+    position: fixed;
+    top: -50px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: top 0.5s ease; /* Smooth slide-down effect */
+    z-index: 1000;
+}
+.notification.show {
+    top: 20px; /* Slide down to visible position */
+}
